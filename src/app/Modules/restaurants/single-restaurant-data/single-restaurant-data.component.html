@@ -1,0 +1,14 @@
+<div class="res-item-contain">
+    <div class="res-data-bottom" [routerLink]="['/restaurant', singleResData.id]">
+        <div>
+            <img class="res-img" [src]="singleResData.restaurantImage">
+        </div>
+        <div class="res-data">
+            <p class="res-data-name">{{singleResData.restaurantName}}</p>
+            <p [ngClass]="singleResData.isOpen? 'res-data-status-open' :'res-data-status-close'">
+                {{singleResData.isOpen ? 'Open Now' : 'Closed'}}</p>
+        </div>
+        <p class="res-data-p">{{singleResData.restaurantDescription}}</p>
+    </div>
+
+</div>

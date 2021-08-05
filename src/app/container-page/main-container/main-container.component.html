@@ -1,0 +1,69 @@
+<section class="sec-contain">
+        <div class="sec-wrapper">
+            <div class="left-menu-contain">
+                <div class="logo-contain">
+                    <div class="logo-img-wrap">
+                        <img class="logo-img" src="assets/Images/path410.svg">
+                        <span class="logo-image-p">Pomo & Co</span>
+                    </div>
+
+                </div>
+                <div class="left-menu-wrap">
+                    <div class="left-menu-item">
+                        <ul class="left-menu-ul">
+                            <li routerLinkActive="menu-active" [routerLink]="['/restaurant']"><img src="assets/Images/home.svg" alt="">
+                                <p>Home</p>
+                            </li>
+                            <li><img src="assets/Images/orders.svg" alt="">
+                                <p>Orders</p>
+                            </li>
+                            <li> <img src="assets/Images/notify.svg" alt="">
+                                <p>Notification</p>
+                                <span class="left-menu-notify-count">3</span>
+                            </li>
+                            <li> <img src="assets/Images/help.svg" alt="">
+                                <p>Help & Support</p>
+                            </li>
+                            <li><img src="assets/Images/settings.svg" alt="">
+                                <p>Settings</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="order-detail-contain">
+                        <div class="detail-box">
+                                <div class="detail-box-close-btn">
+                                        <img src="assets/Images/close.svg" alt=" ">
+                                    </div>
+                                    <div class="detail-box-banner">
+                                        <div class="clock-img-contain">
+                                                <img src="assets/Images/clock.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="detail-box-txt">
+                                        <p class="details-box-heading">Your Order is now Ready</p>
+        
+                                        <div class="detail-subtxt-contain">
+                                            <p class="subhead">Splint Doumo</p>
+                                            <p class="subhead">Order Id: #ED564F</p>
+                                        </div>
+                                    </div>
+                                    <div class="detail-box-submit">
+                                        <button class="btn btn-detail-submit">Details<span class="btn-txt"><img  src="assets/Images/Icon-details.svg" alt=""></span></button>
+                                    </div>
+                           
+                        </div>
+                    </div>
+                    <div class="user-holder-contain">
+                        <div class="user-holder-txt">
+                            <p class="user-name-txt">Mark Clarke</p>
+                            <p class="user-email-txt">markclarke@gmail.com</p>
+                        </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <router-outlet></router-outlet>
+    

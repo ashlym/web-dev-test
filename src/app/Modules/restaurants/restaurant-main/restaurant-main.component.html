@@ -1,0 +1,74 @@
+
+<div class="right-menu-contain">
+        <div class="nav-container">
+            <app-restaurant-header [cuisineItems]="restaurantCuisineList"></app-restaurant-header>
+        </div>
+        <div class="category-contain">
+            <div class="category-title">
+                <p>Category</p>
+            </div>
+            <div class="category-items-hold">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="category-item">
+                            <div class="category-item-img-wrap">
+                                    <img class="category-img" src="assets/Images/Logo.svg" alt="">
+                            </div>
+                           
+                            <p class="category-name-p">Baked</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="category-item">
+                                <div class="category-item-img-wrap">
+                                        <img class="category-img" src="assets/Images/Logo2.svg" alt="">
+                                </div>
+                            
+                            <p class="category-name-p">Sweet</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="category-item">
+                                <div class="category-item-img-wrap">
+                                        <img class="category-img" src="assets/Images/Logo1.svg" alt="">
+                                </div>
+                            
+                            <p class="category-name-p">Hot Dish</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="category-item">
+                                <div class="category-item-img-wrap">
+                                        <img class="category-img" src="assets/Images/Logo4.svg" alt="">
+                                </div>
+                            
+                            <p class="category-name-p">Fast food</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="category-item">
+                                <div class="category-item-img-wrap">
+                                        <img class="category-img" src="assets/Images/Logo4.svg" alt="">
+                                </div>
+                            
+                            <p class="category-name-p">Salads</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="res-listing-contain">
+                <div class="res-title">
+                    <p>Restaurants</p>
+                </div>
+                <div class="res-wrapper">
+                    <div class="row">
+                        <div class="col-md-4" *ngFor="let single of restaurantDetails ;trackBy:identify;">
+                                <app-single-restaurant-data [singleResData]="single"></app-single-restaurant-data>   
+                        </div>
+                            
+                    </div>
+                     
+                </div>
+            </div>
+    </div>

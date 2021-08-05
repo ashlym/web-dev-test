@@ -1,0 +1,46 @@
+<div class="right-menu-contain">
+    <div class="nav-container">
+        <app-restaurant-header></app-restaurant-header>
+        <div class="res-detail-contain">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="res-descr-contain">
+                        <div class="res-name">
+                            <p>{{restaurantDetails?.restaurantName}}</p>
+                        </div>
+                        <div class="res-description">
+                            <p>{{restaurantDetails?.restaurantDescription}}</p>
+                        </div>
+                        <div class="res-contact-contain">
+                            <ul>
+                                <li><img class="res-hour-clock" src="assets/Images/Clock1.svg">
+                                    <p class="res-open-hour">{{restaurantDetails?.openingHours}}</p>
+                                </li>
+                                <li><img class="res-contact-img"
+                                        src="assets/Images/phone.svg">{{restaurantDetails?.contactNumber}}</li>
+                                <li><img class="res-contact-img"
+                                        src="assets/Images/website.svg">{{restaurantDetails?.websiteUrl}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="res-img-contain">
+                        <img class="res-wall-img" [src]="restaurantDetails?.restaurantImage">
+                    </div>
+                </div>
+            </div>
+            <div class="separate-line">
+
+            </div>
+            <div class="categories-contain">
+                <div class="categories-btns-contain">
+                    <button class="btn btn-new-common">All</button>
+                    <button class="btn btn-new-common">Baked(2)</button>
+                    <button class="btn btn-new-common">Sweet(3)</button>
+                    <button class="btn btn-new-common">Hot dish(1)</button>
+                </div>
+            </div>
+        </div>
+
+    </div>

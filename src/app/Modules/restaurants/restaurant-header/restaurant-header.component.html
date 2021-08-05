@@ -1,0 +1,72 @@
+<div class="wrapper">
+    <div>
+        <button class="btn btn-back"><img src="assets/Images/Icon.svg" alt="toggle-icon"></button>
+    </div>
+    <div class="right-nav-contain">
+        <div class="location-contain" *ngIf="!hideItems">
+            <img src="assets/Images/Icon3.svg" alt="otto">
+            <select class="form-select fs-select" aria-label="Default select example">
+                <option selected>Da Otto</option>
+            </select>
+        </div>
+        <div class="search-contain" *ngIf="!hideItems">
+            <img src="assets/Images/search.svg" alt="">
+            <input type="text" class="form-control fc-searchnav"
+                placeholder="Search for Restaurants (Press enter to search)"
+                aria-label="Text input with segmented dropdown button">
+        </div>
+
+
+        <div class="filter-cart-contain">
+            <div class="filter-cart">
+                <div *ngIf="!hideItems" (click)="open(content)">
+                    <button class="btn btn-filter"><img src="assets/Images/Iconfill.svg"></button>
+                </div>
+                <div>
+                    <button class="btn btn-cart"><img src="assets/Images/cart.png"></button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<ng-template #content let-c="close" let-d="dismiss">
+      <div class="modal-header">
+        <p class="modal-title" id="myModalLabel2">Search filters</p>
+        <button type="button" class="close close-modal" data-dismiss="modal" aria-label="Close">
+          <img src="assets/Images/close.svg">
+        </button>
+      </div>
+    <div class="modal-body">
+       <div class="sort-contain">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="sort-title">Sort by</p>
+            </div>
+            <div class="col-md-12">
+                <div class="sort-icon">
+                    <div class="sort-icon-img-contain">
+                            <img src="assets/Images/open.svg" alt="">
+                    </div>
+                    
+                    <p class="sort-icon-p">Open</p>
+                </div>
+            </div>
+        </div>
+        <div class="cuisine-contain">
+           <div class="cuisine-txt">
+               <p>Cuisine</p>
+            <div class="cuisine-txt-list">
+                <button   class="btn btn-cuisine" >All</button>
+                    <button  *ngFor="let list of cuisineItems" class="btn btn btn-cuisine" >{{list}}</button>
+            </div>
+           </div>
+        </div>
+       
+       </div>
+    </div>
+      <div class="modal-footer">
+        <button class="btn-filter-apply">Apply filters</button>
+      </div>
+  </ng-template>
