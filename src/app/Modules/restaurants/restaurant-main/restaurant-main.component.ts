@@ -21,12 +21,14 @@ export class RestaurantMainComponent implements OnInit {
 
   // Fetching all restaurant details
   public getAllRestaurants() {
+    const token = '34303304-5475-4d63-9352-0d24ed631b37';
     this.restaurantDetails = [];
     this.restaurantCuisineList = [];
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
-         Accept: 'application/json'
+         Accept: 'application/json',
+         'Authorization': 'Bearer' + token
       }),
     };
     const url = 'https://api.sheety.co/bdcbafbc1f4197dda178b9e69f6ccee9/techAlchemyWebTest1/allRestaurants';
